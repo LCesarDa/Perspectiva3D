@@ -10,7 +10,7 @@ namespace Motor3D
     public class Figure
     {
         public List<Vertex> Points;
-        public Vertex Centroid, Last;
+        public Vertex Centroid;
 
         public Figure()
         {
@@ -28,7 +28,6 @@ namespace Motor3D
                 Centroid.Y += Points[p].Y;
                 Centroid.Z += Points[p].Z;
             }
-            Last = point;
 
             Centroid.X /= Points.Count;
             Centroid.Y /= Points.Count;
@@ -142,7 +141,6 @@ namespace Motor3D
                 Centroid.Y += Points[p].Y;
                 Centroid.Z += Points[p].Z;
             }
-            Last = Points[Points.Count - 1];
 
             Centroid.X /= Points.Count;
             Centroid.Y /= Points.Count;
